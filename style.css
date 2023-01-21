@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* roots variable  */
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--LightGray);
+}
+
+.priceGrid {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.topSide {
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.topSide .content {
+    width: 95%;
+}
+
+.topSide .content>h1 {
+    margin-bottom: 1.5rem;
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.topSide .content>h2 {
+    margin-bottom: 1rem;
+    color: var(--BrightYellow);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.topSide .content>p {
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.bottomSide {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.bottomSide h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomSide p {
+    color: var(--LightGray);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.leftBottom {
+    background: var(--Cyan);
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1 15rem;
+    border-radius: 0 0 0 5px;
+}
+
+.leftBottom>p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.leftBottom>p>span:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.leftBottom>a {
+    background: var(--BrightYellow);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 12px 30px 10px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+}
+
+.rightBottom {
+    background: #4abebd;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    flex: 1 15rem;
+    border-radius: 0 0 5px 0;
+}
+
+.rightBottom>p {
+    line-height: 1.5;
+}
+
+/* media query  */
+@media screen and (max-width:1000px) {
+    .priceGrid {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:426px) {
+    main {
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .topSide .content {
+        width: 100%;
+    }
+
+    .topSide {
+        padding: 1rem 1rem;
+        height: 16rem;
+    }
+
+    .topSide .content>h2 {
+        font-size: 1rem;
+    }
+
+    .topSide .content>p {
+        line-height: 1.5;
+    }
+
+    .leftBottom {
+        justify-content: space-evenly;
+        height: 16rem;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .rightBottom {
+        padding: 1rem;
+        height: 16rem;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    main {
+        height: auto;
+        padding: 4rem 0;
+    }
+}
